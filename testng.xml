@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Chrome">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="register.RegisterTests">
+                <!--<methods>
+                    <exclude name="t2"/>
+                </methods>-->
+            </class>
+            <!--<class name="login.LoginTests2">
+                <methods>
+                    <include name="t3"/>
+                </methods>
+            </class>
+            <class name="login.LoginTests3">
+                <methods>
+                    <exclude name="t3"/>
+                </methods>
+            </class>-->
+        </classes>
+
+    </test>
+</suite>
