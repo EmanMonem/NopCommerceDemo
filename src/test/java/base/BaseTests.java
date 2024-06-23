@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
+import pages.HomePage;
 
 import java.lang.reflect.Method;
 
@@ -19,6 +20,7 @@ public class BaseTests {
     ChromeOptions chromeOptions;
     EdgeOptions edgeOptions;
     FirefoxOptions firefoxOptions;
+    protected HomePage homePage;
 
 
     @Parameters("browser")
@@ -49,7 +51,7 @@ public class BaseTests {
     public String setup(String browser)  {
         setUpBrowser(browser);
         driver.manage().window().maximize();
-        // homePage = new HomePage(driver);
+        homePage = new HomePage(driver);
         return browser;
     }
 
