@@ -10,8 +10,6 @@ public class RegisterPage extends MethodHandles {
     }
 
     //MandatoryFields
-    final static By genderMaleRadioButton = By.id("gender-male");
-    final static By genderFemaleRadioButton  = By.id("gender-female");
     final static By firstNameField = By.id("FirstName");
     final static By lastNameField = By.id("LastName");
     final static By emailField = By.id("Email");
@@ -19,11 +17,39 @@ public class RegisterPage extends MethodHandles {
     final static By confirmPasswordField = By.id("ConfirmPassword");
 
     //OptionalFields
-    final static By dayField = By.xpath("//*(@name = 'DateOfBirthDay')");
-    final static By monthField = By.xpath("//*(@name = 'DateOfBirthMonth')");
-    final static By yearField = By.xpath("//*(@name = 'DateOfBirthYear')");
+    final static By genderMaleRadioButton = By.id("gender-male");
+    final static By genderFemaleRadioButton  = By.id("gender-female");
+    final static By dayField = By.xpath("//*[@name = 'DateOfBirthDay']");
+    final static By monthField = By.xpath("//*[@name = 'DateOfBirthMonth']");
+    final static By yearField = By.xpath("//*[@name = 'DateOfBirthYear']");
     final static By companyNameField = By.id("Company");
     final static By newsletterField = By.id("Newsletter");
+
+
+    private void insertFirstName(String firstName){
+        sendKeys(firstNameField, 5 ,firstName);
+    }
+    private void insertLastName(String lastName){
+        sendKeys(lastNameField, 5 ,lastName);
+    }
+    private void insertEmail(String email){
+        sendKeys(emailField, 5 ,email);
+    }
+    private void insertPassword(String password){
+        sendKeys(passwordField, 5 ,password);
+    }
+    private void insertConfirmPassword(String confirmPassword){
+        sendKeys(confirmPasswordField, 5 ,confirmPassword);
+    }
+
+    public void registerWithAllMandatoryFields(String firstName ,String lastName ,String email ,String password ,String confirmPassword ){
+        insertFirstName(firstName);
+        insertLastName(lastName);
+        insertEmail(email);
+        insertPassword(password);
+        insertConfirmPassword(confirmPassword);
+    }
+
 
 
 }

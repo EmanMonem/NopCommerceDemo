@@ -11,6 +11,7 @@ public class RegisterTests extends BaseTests {
     public void testRegisterSuccessfully(){
 
         RegisterPage registerPage = homePage.clickOnRegisterLink();
+        registerPage.registerWithAllMandatoryFields("dd","ff","dd@dd.com","111111","111111");
 
     }
 }
