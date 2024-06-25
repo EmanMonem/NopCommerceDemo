@@ -25,6 +25,8 @@ public class RegisterPage extends MethodHandles {
     final static By companyNameField = By.id("Company");
     final static By newsletterField = By.id("Newsletter");
 
+    final static By registerButton = By.id("register-button");
+
 
     private void insertFirstName(String firstName){
         sendKeys(firstNameField, 5 ,firstName);
@@ -42,12 +44,18 @@ public class RegisterPage extends MethodHandles {
         sendKeys(confirmPasswordField, 5 ,confirmPassword);
     }
 
+    public RegisterResultPage clickOnRegisterButton(){
+        click(registerButton,5);
+        return new RegisterResultPage(driver);
+    }
+
     public void registerWithAllMandatoryFields(String firstName ,String lastName ,String email ,String password ,String confirmPassword ){
         insertFirstName(firstName);
         insertLastName(lastName);
         insertEmail(email);
         insertPassword(password);
         insertConfirmPassword(confirmPassword);
+
     }
 
 

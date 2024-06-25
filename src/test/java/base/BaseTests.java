@@ -64,7 +64,7 @@ public class BaseTests {
     public void goHome(Method method) throws Exception {
         utilsTests = new UtilsTests(driver);
         ScreenRecorderUtil.startRecord(method.getName());
-        driver.get("https://demo.nopcommerce.com/");
+        driver.get(dataModel().URL);
         utilsTests.createTestCaseInReport(method);
 
     }

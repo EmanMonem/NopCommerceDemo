@@ -1,3 +1,17 @@
 {
-  "URL": "https://demo.nopcommerce.com/"
+  "URL": "https://demo.nopcommerce.com/",
+  "Register" : {
+    "firstName" : "eu",
+    "lastName" : "eu",
+    "email" : "e@dd.com",
+    "password" : "123456",
+    "confirmPassword" : "123456"
+  },
+  "RegisterWithDifferentUsers" : [
+    ["kru" , "r" , "gyu@g.com" , "123456" , "123456"],
+    ["suk" , "s" , "suy@g.com" , "123456" , "123456"],
+    ["muk" , "m" , "myu@g.com" , "123456" , "123456"]
+  ],
+  "expectedRegisterResultText" : "Your registration completed"
+
 }

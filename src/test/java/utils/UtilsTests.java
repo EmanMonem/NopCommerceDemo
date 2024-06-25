@@ -53,6 +53,8 @@ public class UtilsTests {
         if (result.getStatus() == ITestResult.SUCCESS) {
             test.pass("Test Pass");
         } else if (result.getStatus() == ITestResult.FAILURE) {
+            endOfSteps();
+            test.info(MarkupHelper.createLabel("------------The actual result does not match the expected result------------", ExtentColor.GREY));
             test.fail("Test Fail");
         }
         test.addScreenCaptureFromPath(method.getName()+".png");
