@@ -15,6 +15,8 @@ import org.testng.ITestResult;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import static org.testng.Assert.assertEquals;
 import static utils.MethodHandles.extent;
@@ -30,7 +32,8 @@ public class UtilsTests {
 
     public void takeScreenShot(Method method) throws IOException {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file, new File("report/" + method.getName() + ".png"));
+        String timestamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+        FileUtils.copyFile(file, new File("report/" + method.getName() +".png"));
     }
 
     public void createReport() {

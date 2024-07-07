@@ -5,4 +5,5 @@ public class DataModel {
     public Register Register ;
     public Object[][] RegisterWithDifferentUsers ;
     public String expectedRegisterResultText ;
+    public String expectedFirstNameError;
 }

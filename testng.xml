@@ -9,6 +9,11 @@
                     <exclude name="t2"/>
                 </methods>-->
             </class>
+<!--            <class name="register.LoginTests">-->
+<!--                &lt;!&ndash;<methods>-->
+<!--                    <exclude name="t2"/>-->
+<!--                </methods>&ndash;&gt;-->
+<!--            </class>-->
             <!--<class name="login.LoginTests2">
                 <methods>
                     <include name="t3"/>

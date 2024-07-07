@@ -27,6 +27,11 @@ public class RegisterPage extends MethodHandles {
 
     final static By registerButton = By.id("register-button");
 
+    final static By firstNameError = By.id("FirstName-error");
+    final static By lastNameError = By.id("LastName-error");
+    final static By emailError = By.id("Email-error");
+    final static By passwordError = By.id("ConfirmPassword-error");
+
 
     private void insertFirstName(String firstName){
         sendKeys(firstNameField, 5 ,firstName);
@@ -47,6 +52,9 @@ public class RegisterPage extends MethodHandles {
     public RegisterResultPage clickOnRegisterButton(){
         click(registerButton,5);
         return new RegisterResultPage(driver);
+    }
+    public String getFirstNameErrorText(){
+        return getText(firstNameError,5);
     }
 
     public void registerWithAllMandatoryFields(String firstName ,String lastName ,String email ,String password ,String confirmPassword ){
