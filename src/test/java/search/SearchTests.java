@@ -10,14 +10,14 @@ import java.io.FileNotFoundException;
 
 public class SearchTests extends BaseTests {
 
-//    @DataProvider
-//    public object[] dataForSearch() throws FileNotFoundException {
-//        return dataModel().Search;
-//    }
-//
-//    @Test(dataProvider = "dataForSearch")
-//    public void testSearch(){
-//        SearchResultPage searchResultPage = homePage.searchFeature(da);
-//        Assert.assertTrue(searchResultPage.productTitleIsDisplayed());
-//    }
+    @DataProvider
+    public Object[][] dataForSearch() throws FileNotFoundException {
+       return dataModel().Search;
+    }
+
+    @Test(dataProvider = "dataForSearch")
+    public void testSearch(String Search){
+        SearchResultPage searchResultPage = homePage.searchFeature(Search);
+        Assert.assertTrue(searchResultPage.productTitleIsDisplayed());
+    }
 }

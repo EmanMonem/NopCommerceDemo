@@ -16,6 +16,8 @@
   ],
   "expectedRegisterResultText" : "Your registration completed" ,
   "expectedFirstNameError" : "First name is required." ,
-  "Search" : ["Apple iCam" ,"Apple MacBook Pro 13-inch" ]
+  "Search" : [
+    ["Apple iCam"],["Apple MacBook Pro 13-inch" ]
+  ]
 
 }
