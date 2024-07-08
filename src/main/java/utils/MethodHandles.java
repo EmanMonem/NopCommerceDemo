@@ -23,7 +23,10 @@ public class MethodHandles {
         this.driver =driver;
     }
 
-    private final By barNotification = By.id("bar-notification");
+    private   final By barNotification = By.id("bar-notification");
+    public boolean barNotificationIsDisplayed(){
+        return isDisplayed(barNotification,5);
+    }
 
     private WebElement webElement(By locator){
         return driver.findElement(locator);
@@ -284,9 +287,7 @@ public class MethodHandles {
     protected void switchToParent(){
         driver.switchTo().parentFrame();
     }
-    public boolean barNotificationIsDisplayed(){
-        return isDisplayed(barNotification,5);
-    }
+
 //    public void scrollIntoElement(WebDriver driver, By locator ) {
 //        JavascriptExecutor js = (JavascriptExecutor) driver;
 //        js.executeScript("arguments[0].scrollIntoView(true);",webElement(locator));

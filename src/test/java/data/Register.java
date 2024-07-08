@@ -6,4 +6,6 @@ public class Register {
     public String email ;
     public String password ;
     public String confirmPassword ;
+    public String NewPassword ;
+    public String ConfirmNewPassword ;
 }

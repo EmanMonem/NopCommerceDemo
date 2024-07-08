@@ -1,4 +1,4 @@
-package register;
+package login;
 
 import base.BaseTests;
 import org.testng.Assert;

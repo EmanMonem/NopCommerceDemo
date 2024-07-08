@@ -3,9 +3,11 @@
   "Register" : {
     "firstName" : "eu",
     "lastName" : "eu",
-    "email" : "r@dd.com",
+    "email" : "y@dd.com",
     "password" : "123456",
-    "confirmPassword" : "123456"
+    "confirmPassword" : "123456",
+    "NewPassword" : "789654",
+    "ConfirmNewPassword" : "789654"
   },
   "RegisterWithDifferentUsers" : [
     ["kru" , "r" , "gyu@g.com" , "123456" , "123456"],
@@ -13,6 +15,7 @@
     ["muk" , "m" , "myu@g.com" , "123456" , "123456"]
   ],
   "expectedRegisterResultText" : "Your registration completed" ,
-  "expectedFirstNameError" : "First name is required."
+  "expectedFirstNameError" : "First name is required." ,
+  "Search" : ["Apple iCam" ,"Apple MacBook Pro 13-inch" ]
 
 }

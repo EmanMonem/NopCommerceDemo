@@ -4,12 +4,12 @@
     <test name="Chrome">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="register.RegisterTests">
+            <class name="search.SearchTests">
                 <!--<methods>
                     <exclude name="t2"/>
                 </methods>-->
             </class>
-<!--            <class name="register.LoginTests">-->
+<!--            <class name="login.LoginTests">-->
 <!--                &lt;!&ndash;<methods>-->
 <!--                    <exclude name="t2"/>-->
 <!--                </methods>&ndash;&gt;-->
