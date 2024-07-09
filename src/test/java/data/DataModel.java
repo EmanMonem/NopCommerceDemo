@@ -6,5 +6,5 @@ public class DataModel {
     public Object[][] RegisterWithDifferentUsers ;
     public String expectedRegisterResultText ;
     public String expectedFirstNameError;
-    public String Search;
+    public Object[][] Search;
 }

@@ -10,27 +10,27 @@ public class RegisterPage extends MethodHandles {
     }
 
     //MandatoryFields
-    final static By firstNameField = By.id("FirstName");
-    final static By lastNameField = By.id("LastName");
-    final static By emailField = By.id("Email");
-    final static By passwordField = By.id("Password");
-    final static By confirmPasswordField = By.id("ConfirmPassword");
+    private final By firstNameField = By.id("FirstName");
+    private final By lastNameField = By.id("LastName");
+    private final By emailField = By.id("Email");
+    private final By passwordField = By.id("Password");
+    private final By confirmPasswordField = By.id("ConfirmPassword");
 
     //OptionalFields
-    final static By genderMaleRadioButton = By.id("gender-male");
-    final static By genderFemaleRadioButton  = By.id("gender-female");
-    final static By dayField = By.xpath("//*[@name = 'DateOfBirthDay']");
-    final static By monthField = By.xpath("//*[@name = 'DateOfBirthMonth']");
-    final static By yearField = By.xpath("//*[@name = 'DateOfBirthYear']");
-    final static By companyNameField = By.id("Company");
-    final static By newsletterField = By.id("Newsletter");
+    private final By genderMaleRadioButton = By.id("gender-male");
+    private final By genderFemaleRadioButton  = By.id("gender-female");
+    private final By dayField = By.xpath("//*[@name = 'DateOfBirthDay']");
+    private final By monthField = By.xpath("//*[@name = 'DateOfBirthMonth']");
+    private final By yearField = By.xpath("//*[@name = 'DateOfBirthYear']");
+    private final By companyNameField = By.id("Company");
+    private final By newsletterField = By.id("Newsletter");
 
-    final static By registerButton = By.id("register-button");
+    private final By registerButton = By.id("register-button");
 
-    final static By firstNameError = By.id("FirstName-error");
-    final static By lastNameError = By.id("LastName-error");
-    final static By emailError = By.id("Email-error");
-    final static By passwordError = By.id("ConfirmPassword-error");
+    private final By firstNameError = By.id("FirstName-error");
+    private final By lastNameError = By.id("LastName-error");
+    private final By emailError = By.id("Email-error");
+    private final By passwordError = By.id("ConfirmPassword-error");
 
 
     private void insertFirstName(String firstName){

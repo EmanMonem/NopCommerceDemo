@@ -8,9 +8,12 @@ public class SearchResultPage extends MethodHandles {
     public SearchResultPage(WebDriver driver) {
         super(driver);
     }
-    final static By productTitle = By.xpath("(//h2[@class='product-title'])");
+    private final By productTitle = By.xpath("(//h2[@class='product-title'])");
+
+
 
     public boolean productTitleIsDisplayed(){
+        scrollIntoElement(driver,productTitle);
         return isDisplayed(productTitle , 5);
     }
 

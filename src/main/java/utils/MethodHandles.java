@@ -62,6 +62,7 @@ public class MethodHandles {
             }
         }
     }
+
     protected void clear(By locator,int time){
         for (int i = 0;i<5;i++){
             try {
@@ -288,10 +289,10 @@ public class MethodHandles {
         driver.switchTo().parentFrame();
     }
 
-//    public void scrollIntoElement(WebDriver driver, By locator ) {
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("arguments[0].scrollIntoView(true);",webElement(locator));
-//    }
+    public void scrollIntoElement(WebDriver driver, By locator ) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);",webElement(locator));
+    }
 
     private static String getMethodName() {
         StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();

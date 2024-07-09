@@ -10,10 +10,10 @@ public class RegisterResultPage extends MethodHandles {
         super(driver);
     }
 
-    final static By registerResultText = By.xpath("//div[contains(text(),'Your registration completed')]");
-    final static By continueButton = By.xpath("//a[contains(text(),'Continue')]");
-    final static By myAccountLink = By.xpath("(//a[contains(text(),'My account')])");
-   final static By logOutLink = By.xpath("//a[contains(text(),'Log out')]") ;
+    private final By registerResultText = By.xpath("//div[contains(text(),'Your registration completed')]");
+    private final By continueButton = By.xpath("//a[contains(text(),'Continue')]");
+    private final By myAccountLink = By.xpath("(//a[contains(text(),'My account')])");
+    private final By logOutLink = By.xpath("//a[contains(text(),'Log out')]") ;
 
     public String getRegisterResultText(){
        return getText(registerResultText , 5);

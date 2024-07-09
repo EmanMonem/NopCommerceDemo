@@ -9,10 +9,10 @@ public class ChangePasswordPage extends MethodHandles {
         super(driver);
     }
 
-    final static By oldPasswordField = By.id("OldPassword");
-    final static By newPasswordField = By.id("NewPassword");
-    final static By confirmPasswordField = By.id("ConfirmNewPassword");
-    final static By changePasswordButton = By.xpath("//button[contains(text(),'Change password')]");
+    private final By oldPasswordField = By.id("OldPassword");
+    private final By newPasswordField = By.id("NewPassword");
+    private final By confirmPasswordField = By.id("ConfirmNewPassword");
+    private final By changePasswordButton = By.xpath("//button[contains(text(),'Change password')]");
     //final static By logOutLink = By.xpath("//a[contains(text(),'Log out')]") ;
 
     private void insertOldPassword(String oldPassword){

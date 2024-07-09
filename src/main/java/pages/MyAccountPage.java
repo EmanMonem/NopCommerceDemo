@@ -8,7 +8,7 @@ public class MyAccountPage extends MethodHandles {
     public MyAccountPage(WebDriver driver) {
         super(driver);
     }
-    final static By changePasswordLink = By.xpath("//a[contains(text(),'Change password')]");
+    private final By changePasswordLink = By.xpath("//a[contains(text(),'Change password')]");
 
     public ChangePasswordPage clickOnChangePasswordLink(){
         click(changePasswordLink,5);
