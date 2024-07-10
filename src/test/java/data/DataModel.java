@@ -7,4 +7,6 @@ public class DataModel {
     public String expectedRegisterResultText ;
     public String expectedFirstNameError;
     public Object[][] Search;
+    public ContactUs ContactUs ;
+    public EmailFriend EmailFriend;
 }

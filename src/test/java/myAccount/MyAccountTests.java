@@ -22,9 +22,7 @@ public class MyAccountTests extends BaseTests {
                 dataModel().Register.password,
                 dataModel().Register.confirmPassword);
         registerResultPage = registerPage.clickOnRegisterButton();
-
-
-        String expectedResult = dataModel().expectedRegisterResultText;
+       String expectedResult = dataModel().expectedRegisterResultText;
         String actualResult = registerResultPage.getRegisterResultText();
         Assert.assertEquals(actualResult,expectedResult);
         // myAssertEquals(actualResult,expectedResult);
