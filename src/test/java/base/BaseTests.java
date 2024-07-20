@@ -29,7 +29,7 @@ public class BaseTests {
     UtilsTests utilsTests;
 
     @Parameters("browser")
-    public void setUpBrowser(String browser) {
+    public void setUpBrowser(@Optional("chrome") String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("headlessChrome")) {
@@ -53,7 +53,7 @@ public class BaseTests {
 
     @Parameters("browser")
     @BeforeClass
-    public String setup(String browser)  {
+    public String setup(@Optional("chrome") String browser)  {
         setUpBrowser(browser);
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
