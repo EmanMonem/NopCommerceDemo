@@ -18,9 +18,11 @@ public class CompareListTests extends BaseTests {
         productDetailsPage.clickOnAddToCompareListButton();
         assert(productDetailsPage.barNotificationIsDisplayed());
         CompareProductsPage compareProductsPage = productDetailsPage.clickOnProductComparisonLink();
-        compareProductsPage.CompareProducts();
-        Assert.assertTrue(compareProductsPage.getFirstProductText().contains("mac"));
-        Assert.assertTrue(compareProductsPage.getSecondProductText().contains("asus"));
+        //compareProductsPage.CompareProducts();
+        Assert.assertTrue(compareProductsPage.getFirstProductText().contains("Mac"));
+        Assert.assertTrue(compareProductsPage.getSecondProductText().contains("Asus"));
+        compareProductsPage.clickOnClearListButton();
+        Assert.assertTrue(compareProductsPage.clearListMessageIsDisplayed());
 
 
     }

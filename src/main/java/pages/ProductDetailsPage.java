@@ -18,6 +18,8 @@ public class ProductDetailsPage extends MethodHandles {
     private final By submitReviewButton = By.id("add-review");
     private final By addToCompareListButton = By.xpath("//button[contains(text(),'Add to compare list')]");
     private final By productComparisonLink = By.xpath("//a[contains(text(),'product comparison')]");
+    private final By addToCardButton = By.xpath("//input[contains(@id, 'add-to-cart-button')])");
+    private final By shoppingCardLink = By.xpath("//a[contains(text(),'shopping cart')]");
 
     public String getProductName(){
         return getText(productName , 5);
@@ -56,6 +58,13 @@ public class ProductDetailsPage extends MethodHandles {
     public CompareProductsPage  clickOnProductComparisonLink(){
         click(productComparisonLink , 5);
         return new CompareProductsPage(driver);
+    }
+    public void clickOnAddToCardButton(){
+        click(addToCardButton , 5);
+    }
+    public CardPage clickOnShoppingCardLink(){
+        click(shoppingCardLink,5);
+        return new CardPage(driver);
     }
 
 }
