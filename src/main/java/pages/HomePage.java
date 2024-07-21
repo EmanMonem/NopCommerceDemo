@@ -23,7 +23,11 @@ public class HomePage extends MethodHandles {
     private final By searchButton = By.xpath("(//button[contains(text(),'Search')])");
     private final By searchBox = By.xpath("//ul[@id='ui-id-1']"); // Corrected locator
     private final By contactUsLink = By.xpath("//a[contains(text(),'Contact us')]");
+    private final By logOutLink = By.xpath("//a[contains(text(),'Logout')]");
 
+    public void clickOnLogOutLink(){
+        click(loginLink,5);
+    }
     public RegisterPage clickOnRegisterLink(){
         click(registerLink, 5);
         return new RegisterPage(driver);
@@ -78,5 +82,10 @@ public class HomePage extends MethodHandles {
         scrollIntoElement(driver, contactUsLink);
         click(contactUsLink, 5);
         return new ContactUsPage(driver);
+    }
+    public MyContactUSPage clickOnContactUsLink1(){
+        scrollIntoElement(driver, contactUsLink);
+        click(contactUsLink, 5);
+        return new MyContactUSPage(driver);
     }
 }
