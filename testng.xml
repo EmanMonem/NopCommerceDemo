@@ -4,7 +4,7 @@
     <test name="Chrome">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="addReview.AddReviewTests">
+            <class name="checkOut.RegisteredUserCheckOutTests">
                 <!--<methods>
                     <exclude name="t2"/>
                 </methods>-->
