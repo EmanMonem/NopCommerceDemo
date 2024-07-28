@@ -24,6 +24,20 @@ public class HomePage extends MethodHandles {
     private final By searchBox = By.xpath("//ul[@id='ui-id-1']"); // Corrected locator
     private final By contactUsLink = By.xpath("//a[contains(text(),'Contact us')]");
     private final By logOutLink = By.xpath("//a[contains(text(),'Logout')]");
+    private final By viewProductLink = By.linkText("View Product");
+    private final By product = By.cssSelector(".single-products");
+    private final By addToCardButton = By.cssSelector(".product-overlay > .overlay-content > a");
+
+
+    public void clickOnAddToCardButton(){
+        hoverOverElement(product,5);
+        click(addToCardButton,5);
+    }
+
+    public MyProductDetailsPage clickOnViewProductLink(){
+        click(viewProductLink,5);
+        return new MyProductDetailsPage(driver);
+    }
 
     public void clickOnLogOutLink(){
         click(loginLink,5);
